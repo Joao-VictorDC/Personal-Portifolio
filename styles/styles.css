@@ -1,0 +1,177 @@
+/*LEMBRAR DE APAGAR COMENTÁRIOS*/
+* {
+    /*Ajusta todos os elementos, zerando a margem, o padding, definindo fontes padrões e o */
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    /*Define que width e height incluirão conteúdo, padding e border*/
+}
+
+body {
+    background-color: #080808;
+    /*Cor de fundo*/
+    color: #fff;
+    /*Cor do conteúdo*/
+}
+
+#header {
+    width: 100%;
+    /*largura de 100%, ou seja, ocupará todo o espaço reservado*/
+    height: 100vh;
+    /*vh significa viewport height, ou seja, o #header ocupará 100% no espeço da visualização da tela */
+    background-image: url(images/background.png);
+    /*Defina imagem de fundo. O método url() referencia uma imagem*/
+    background-size: cover;
+    /*Tamanho do background*/
+    /*
+        background-size:
+            contain -> ajusta a imagem para caber toda na viewport;
+            cover -> 
+    */
+    background-position: center;
+    /* Posiciona o background no centro*/
+}
+
+.container {
+    padding: 10% 70px;
+}
+
+nav {
+    display: flex;
+    /* Permite manipular os elemtenos filhos de forma mais flexível*/
+    align-items: center;
+    /* Centraliza os itens dentro de uma flex-box*/
+    justify-content: space-between;
+    /* Justifica o conteúdo de uma flex-box colocando um espaço entre os filhos*/
+    flex-wrap: wrap;
+    /* Permite uma quebra de linha entre os filhos*/
+}
+
+.logo {
+    width: 140px;
+}
+
+nav ul li {
+    display: inline-block;
+    /* Coloca o display em blocos*/
+    list-style: none;
+    /* retira toda estilização de lista do HTML*/
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    /* Pseudo-elemento que adiciona conteúdo após o elemento em si*/
+    content: '';
+    /* Conteúdo do Pseudo-elemento*/
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.2s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+} 
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span {
+    color: #ff004f;
+}
+
+/* ---------------about--------------- */
+#about {
+    padding: 80px 0;
+    color: #ababaa;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.about-col-2 {
+    flex-basis: 50%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.2s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+
+}
+
+.tab-contents ul li span {
+    color: #b54769 ;
+    font-size: 14px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}

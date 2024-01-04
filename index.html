@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Porfolio - Dórea</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body>
     <div id="header">
@@ -20,7 +20,58 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p> 
+                <h1>Hi, I'm <span>Dórea</span><br>From Brazil</h1>
+            </div>
         </div>
     </div>
+    <!-- ---------------about--------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio amet deserunt accusantium eos aut, labore nesciunt quae aperiam maiores rem, doloremque et commodi alias similique odit libero omnis ipsam fugit!</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <!-- ---------------Graduação--------------- -->
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI?UX</span><br>Designing Web/App</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps</li>
+                        </ul>
+                    </div>
+                    <!-- ---------------Experiência--------------- -->
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 - Current</span><br>Desenvolvedor Júnior na Chacal Sistemas</li>
+                            <li><span>lorem </span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps</li>
+                        </ul>
+                    </div>
+                    <!-- ---------------Education--------------- -->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 - Current</span><br>Bacharelado em Engenharia de Computação na UNIJORGE</li>
+                            <li><span>2023 - Current</span><br>Técnico em Redes de Computadores no ICEIA</li>
+                            <li><span>2023 - Current</span><br>Técnico em Automação Industrial no IFBA</li>
+                            <li><span>2023 - Current</span><br>Possível curso para o Núcleo Preparatório de Oficiais da Reserva</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>
